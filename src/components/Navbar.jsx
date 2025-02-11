@@ -1,0 +1,54 @@
+import { motion } from "framer-motion";
+
+const Navbar = () => {
+  return (
+    <motion.div
+      className="bg-white shadow-lg fixed top-0 left-0 w-full z-50"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <div className="flex justify-between items-center py-4 px-6 md:px-12">
+        <motion.h1
+          className="text-3xl md:text-4xl font-bold text-orange-500 cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+        >
+          Medivue
+        </motion.h1>
+        <motion.div
+          className="hidden md:flex gap-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {['Home', 'Our Program', 'Our Partners', 'Testimonial'].map((item, index) => (
+            <motion.h1
+              key={index}
+              className="text-gray-800 text-lg font-medium cursor-pointer relative group"
+              whileHover={{ color: "#f97316" }} 
+              transition={{ duration: 0.3 }}
+            >
+              {item}
+              <motion.div
+                className="h-1 bg-orange-500 absolute bottom-0 left-0 right-0 scale-x-0 group-hover:scale-x-100 origin-left"
+                transition={{ duration: 0.3 }}
+              />
+            </motion.h1>
+          ))}
+        </motion.div>
+
+
+        <motion.button
+          className="py-2 px-4 rounded-lg bg-orange-500 text-white font-semibold shadow-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-300 transition-all"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Forum
+        </motion.button>
+        
+      </div>
+    </motion.div>
+  );
+};
+
+export default Navbar;
