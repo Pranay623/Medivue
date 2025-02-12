@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <div className='p-5'>
+    <div className='p-5 n'>
       <Router>
      {/* <h1 className='text-4xl'>Heelloo</h1> */}
      <Routes>

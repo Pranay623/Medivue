@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.div
-      className="bg-white shadow-lg fixed top-0 left-0 w-full z-50"
+      className="bg-white shadow-lg fixed top-0 left-0 w-full z-50 rounded-4xl"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
