@@ -7,8 +7,8 @@ import CountUp from "react-countup";
 const Land = () => {
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-between p-6 mt-[6rem]">
-        <div className="text-center lg:text-left max-w-xl">
+      <div className="flex flex-row lg:flex-row items-center justify-between p-2 mt-[6rem] gap-[16rem] ml-8 overflow-x-hidden">
+        <div className="text-left lg:text-left max-w-xl">
         <motion.h1
     className="text-5xl lg:text-8xl font-bold"
     initial={{ opacity: 0, x: -50 }}
@@ -53,11 +53,11 @@ const Land = () => {
   >
     EASY WITH US
   </motion.h1>
-          <p className="text-gray-600 text-lg mt-4">
+          <p className="text-gray-600 text-lg mt-6">
             Assisting you in enrolling in an overseas program at an affordable
             cost at your best university.
           </p>
-          <div className="flex justify-center lg:justify-start gap-4 mt-6">
+          <div className="flex justify-center lg:justify-start gap-4 mt-9">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
               Join Us
             </button>
@@ -65,24 +65,24 @@ const Land = () => {
               Learn More
             </button>
           </div>
-          <div className="flex justify-center lg:justify-start gap-[9rem] mt-10">
+          <div className="flex justify-center lg:justify-start gap-[4rem] mt-13 lg:gap-[9rem]">
             <div className="text-center">
             <h2 className="text-6xl font-bold text-orange-500">
           <CountUp end={183} duration={3} separator="," suffix="K" />
         </h2>
-              <p className="text-gray-600 text-3xl ">Our Alumni</p>
+              <p className="text-gray-600 text-3xl mt-3 ">Our Alumni</p>
             </div>
             <div className="text-center">
             <h2 className="text-6xl font-bold text-orange-500">
           <CountUp end={124} duration={3} separator="," suffix="K" />
         </h2>
-              <p className="text-gray-600 text-3xl ml-4">Campus Collaboration</p>
+              <p className="text-gray-600 text-3xl ml-4 mt-3">Campus Collaboration</p>
             </div>
           </div>
         </div>
         <motion.img
   src={m1}
-  className="w-[60vw] h-[80vh] left-[45rem] fixed"
+  className="w-[50vw] h-[60vh] mt-[-10rem]"
   initial={{ opacity: 0, y: 0 }}
   animate={{
     opacity: 1, 
