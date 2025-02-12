@@ -31,6 +31,9 @@ const Navbar = () => {
               {item}
               <motion.div
                 className="h-1 bg-orange-500 absolute bottom-0 left-0 right-0 scale-x-0 group-hover:scale-x-100 origin-left"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
             </motion.h1>

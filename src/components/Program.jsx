@@ -20,15 +20,15 @@ const Program = () => {
         desc: "Studying pharmacy abroad offers students access to advanced research facilities and global career opportunities.",
       },
       {
-        title: "Engineering",
-        desc: "Explore innovative engineering programs abroad that focus on practical learning and global technology trends.",
+        title: "Healthcare Administration",
+        desc: "Develop leadership and management skills for roles in global healthcare systems.",
       },
     ];
   
     return (
-        <div className="p-8">
+        <div className="p-4 flex flex-col gap-[2rem]">
       {/* Section Title */}
-      <div className="text-center mb-12">
+      <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-800">
           Our <span className="text-orange-500">Programs</span>
         </h1>
@@ -38,11 +38,11 @@ const Program = () => {
       </div>
 
       {/* Card Container */}
-      <div className="overflow-x flex space-x-6 scrollbar-hide">
+      <div className="overflow-x-auto flex space-x-6 scrollbar-hide p-6">
         {programs.map((program, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 w-[20vw] h-[50vh] flex flex-col justify-around hover:shadow-2xl transition-shadow duration-300 relative"
+            className="bg-white rounded-2xl shadow-lg p-6 w-[20vw] h-[50vh] flex flex-col justify-around hover:shadow-2xl transition-shadow duration-300 relative border border-amber-600"
             whileHover={{
               scale: 1.05,
               translateY: -10,
