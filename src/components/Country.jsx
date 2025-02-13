@@ -51,25 +51,24 @@ const Country = () => {
       </div>
       <div className="relative overflow-x-auto flex gap-8 p-5 scrollbar-hide">
         {countries.map((country, index) => (
-        <motion.div
+          <motion.div
             key={index}
-            className="relative min-w-[250px] sm:min-w-[300px] lg:min-w-[400px] flex-shrink-0 rounded-2xl shadow-lg border border-orange-500 transition-transform duration-300"
+            className="relative min-w-[15px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px] xl:min-w-[350px] flex-shrink-0 rounded-2xl shadow-lg border border-orange-500 transition-transform duration-300"
             whileHover={{ scale: 1.1 }}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-
             <img
-             src={country.image}
+              src={country.image}
               alt={country.name}
-              className="w-full h-64 object-cover rounded-t-2xl"
+              className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-2xl"
             />
             <div className="bg-white p-4 rounded-b-2xl">
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
                 {country.name}
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed line-clamp-4 mt-2"> 
+              <p className="text-sm sm:text-md md:text-lg text-gray-600 leading-relaxed line-clamp-3 sm:line-clamp-4 mt-2">
                 {country.desc}
               </p>
             </div>

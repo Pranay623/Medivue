@@ -2,9 +2,13 @@ import { useState } from 'react'
 import './App.css'
 import Hero from './components/Hero.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
 
   return (
     <>

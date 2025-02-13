@@ -5,7 +5,7 @@ import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from "@fortawesome/
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-[-6rem]">
+    <footer className="bg-gray-800 text-white py-8 md:mt-[-6rem]">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <motion.h1

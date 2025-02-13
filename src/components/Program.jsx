@@ -44,7 +44,7 @@ const Program = () => {
         {mbbsAbroadContent.map((program, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 w-[20vw] h-[50vh] flex flex-col justify-around hover:shadow-2xl transition-shadow duration-300 relative border border-amber-600"
+            className="bg-white rounded-2xl shadow-lg p-6 lg:w-[20vw] lg:h-[50vh] flex flex-col justify-around hover:shadow-2xl transition-shadow duration-300 relative border border-amber-600 md:w-[30vw] "
             whileHover={{
               scale: 1.05,
               translateY: -10,
@@ -58,10 +58,10 @@ const Program = () => {
               icon={program.icon}
               className="text-3xl text-orange-500"
             />
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 text-center">
+            <h2 className="lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 text-center md:text-xl">
               {program.heading}
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed line-clamp-4 mt-2">
+            <p className="md:text-lg text-gray-600 leading-relaxed line-clamp-4 mt-2 text-sm">
               {program.desc}
             </p>
             <div className="flex mt-4">
@@ -69,6 +69,7 @@ const Program = () => {
                 Read More
               </button>
             </div>
+
             <div className=" inset-0 bg-gradient-to-b from-transparent via-transparent to-orange-100 opacity-0 hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
           </motion.div>
         ))}
