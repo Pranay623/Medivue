@@ -70,7 +70,7 @@ const Land = () => {
             <h2 className="text-6xl font-bold text-orange-500">
           <CountUp end={183} duration={3} separator="," suffix="K" />
         </h2>
-              <p className="text-gray-600 text-3xl mt-3 ">Our Alumni</p>
+              <p className="text-gray-600 text-3xl mt-3 ">Our <br/>Alumni</p>
             </div>
             <div className="text-center">
             <h2 className="text-6xl font-bold text-orange-500">
