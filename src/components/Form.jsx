@@ -4,16 +4,24 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
-  name: z
-    .string()
-    .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must not exceed 50 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z
-    .string()
-    .regex(/^\d{10}$/, "Phone number must be 10 digits"),
-  country: z.string().min(2, "Country preference is required"),
-});
+    name: z
+      .string()
+      .min(2, "Name must be at least 2 characters")
+      .max(50, "Name must not exceed 50 characters")
+      .regex(/^[a-zA-Z\s]+$/, "Name must contain only alphabetic characters"),
+    email: z
+      .string()
+      .email("Invalid email address")
+      .regex(/@.*\.com$/, "Email must contain '@' and end with '.com'"),
+    phone: z
+      .string()
+      .regex(/^\d{10}$/, "Phone number must be exactly 10 digits"),
+    country: z
+      .string()
+      .min(2, "Country preference is required")
+      .regex(/^[a-zA-Z\s]+$/, "Country must contain only alphabetic characters"),
+  });
+  
 
 const Form = () => {
   const {
@@ -67,6 +75,7 @@ const Form = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <TextInput
         label="Name"
+        type = "text"
         placeholder="Enter Your Name"
         register={register("name")}
         error={errors.name}
@@ -103,15 +112,18 @@ const Form = () => {
 };
 
 const TextInput = ({ label, placeholder, register, error }) => (
-  <div className="space-y-2">
-    {/* {label && <label className="block text-sm font-medium text-gray-700">{label}</label>} */}
-    <input
-      placeholder={placeholder}
-      {...register}
-      className="w-full p-2 mb-4 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-    />
-    {error && <span className="text-red-500 text-xs">{error.message}</span>}
-  </div>
-);
+    <div className="space-y-2">
+      <label className="block text-sm font-medium text-gray-700">{label}</label>
+      <input
+        type="text"
+        placeholder={placeholder}
+        {...register}
+        className={`w-full px-4 py-2 border rounded-lg ${
+          error ? "border-red-500" : "border-gray-300"
+        }`}
+      />
+      {error && <p className="text-red-500 text-sm">{error.message}</p>}
+    </div>
+  );
 
 export default Form;
