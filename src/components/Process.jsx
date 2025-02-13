@@ -31,17 +31,16 @@ const steps = [
 ];
 
 const Process = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ threshold: 0.2 });
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden"); 
+      }
+    }, [controls, inView]);
   return (
     <div className="p-6 flex flex-col items-center">
       <div className="text-center mb-8">

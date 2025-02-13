@@ -21,14 +21,20 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          {['Home', 'Our Program', 'Our Partners', 'Testimonial'].map((item, index) => (
-            <motion.h1
+          {[
+            { name: 'Home', href: '#home' },
+            { name: 'Benefits', href: '#program' },
+            { name: 'Countries', href: '#country' },
+            { name: 'Process', href: '#process' },
+          ].map((item, index) => (
+            <motion.a
               key={index}
+              href={item.href}
               className="text-gray-800 text-lg font-medium cursor-pointer relative group"
-              whileHover={{ color: "#f97316" }} 
+              whileHover={{ color: "#f97316" }}
               transition={{ duration: 0.3 }}
             >
-              {item}
+              {item.name}
               <motion.div
                 className="h-1 bg-orange-500 absolute bottom-0 left-0 right-0 scale-x-0 group-hover:scale-x-100 origin-left"
                 initial={{ scaleX: 0 }}
@@ -36,19 +42,17 @@ const Navbar = () => {
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.h1>
+            </motion.a>
           ))}
         </motion.div>
-
 
         <motion.button
           className="py-2 px-4 rounded-lg bg-orange-500 text-white font-semibold shadow-md hover:bg-orange-600 focus:ring-2 focus:ring-orange-300 transition-all"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          Forum
+          <a href="#form">Application Form</a>
         </motion.button>
-        
       </div>
     </motion.div>
   );

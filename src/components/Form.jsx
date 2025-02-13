@@ -60,7 +60,7 @@ const Form = () => {
       </h3>
     </div>
   </div>
-  <div className="p-6 bg-white rounded-2xl shadow-lg w-[50%] -ml-20 -mt-25 relative z-10 mr-[5rem] border border-amber-600">
+  <div className="p-13 bg-white rounded-2xl shadow-lg w-[50%] -ml-20 -mt-25 relative z-10 mr-[5rem] border border-amber-600 ">
     <h1 className="text-2xl font-bold text-orange-600 text-center mb-4">
       Application Form
     </h1>
@@ -103,12 +103,12 @@ const Form = () => {
 };
 
 const TextInput = ({ label, placeholder, register, error }) => (
-  <div className="space-y-1">
-    {label && <label className="block text-sm font-medium text-gray-700">{label}</label>}
+  <div className="space-y-2">
+    {/* {label && <label className="block text-sm font-medium text-gray-700">{label}</label>} */}
     <input
       placeholder={placeholder}
       {...register}
-      className="w-full p-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+      className="w-full p-2 mb-4 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
     />
     {error && <span className="text-red-500 text-xs">{error.message}</span>}
   </div>
