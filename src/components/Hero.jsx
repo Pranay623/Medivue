@@ -3,7 +3,7 @@ import Land from "./Land.jsx"
 import g1 from "../assets/girl1.png"
 import {motion} from "framer-motion"
 import Program from "./Program.jsx"
-import About from "./About.jsx"
+import Country from "./Country.jsx"
 
 
 
@@ -15,7 +15,7 @@ const hero = () =>{
         <div className="flex flex-col gap-10">
         <Land/>
         <Program/>
-        <About/>
+        <Country/>
         </div>
         </>
     )

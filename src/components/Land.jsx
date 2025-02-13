@@ -59,7 +59,7 @@ const Land = () => {
           </p>
           <div className="flex justify-center lg:justify-start gap-4 mt-9">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg">
-              Join Us
+              Apply Now
             </button>
             <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg">
               Learn More
