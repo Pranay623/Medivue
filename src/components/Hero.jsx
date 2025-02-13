@@ -4,6 +4,8 @@ import g1 from "../assets/girl1.png"
 import {motion} from "framer-motion"
 import Program from "./Program.jsx"
 import Country from "./Country.jsx"
+import Process from "./Process.jsx"
+import Form from "./Form.jsx"
 
 
 
@@ -16,6 +18,8 @@ const hero = () =>{
         <Land/>
         <Program/>
         <Country/>
+        <Process/>
+        <Form/>
         </div>
         </>
     )

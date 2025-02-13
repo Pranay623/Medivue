@@ -41,7 +41,6 @@ const Country = () => {
 
   return (
     <div className="p-6 flex flex-col gap-6">
-      {/* Section Title */}
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-800">
           <span className="text-orange-500">Top Destinations</span> for MBBS Abroad
@@ -54,7 +53,7 @@ const Country = () => {
         {countries.map((country, index) => (
         <motion.div
             key={index}
-            className="relative min-w-[250px] sm:min-w-[300px] lg:min-w-[400px] flex-shrink-0 rounded-2xl shadow-xl border border-orange-500 transition-transform duration-300"
+            className="relative min-w-[250px] sm:min-w-[300px] lg:min-w-[400px] flex-shrink-0 rounded-2xl shadow-lg border border-orange-500 transition-transform duration-300"
             whileHover={{ scale: 1.1 }}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
