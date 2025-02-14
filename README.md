@@ -38,8 +38,11 @@ Before getting started, ensure you have the following installed on your system:
    ```bash
    cd /path/to/extracted-folder
 3.Run the following command to install project dependencies:
+ ```bash
   npm install
+  ```
 4. After the installation is complete, start the development server with:
+ ```bash
   npm run dev
-
+```
 Now your Project is Ready to run on your localhost machine.
